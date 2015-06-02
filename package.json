@@ -1,6 +1,6 @@
 {
   "name": "jsnbt-google-analytics",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Puts the google analytics snippet on the front end pages",
   "keywords": [
     "jsnbt",
@@ -9,6 +9,15 @@
   ],
   "author": {
     "name": "Apostolis Konoupakis",
+    "email": "konoupakis@gmail.com"
+  },
+  "readme": "null",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akonoupakis/jsnbt-google-analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akonoupakis/jsnbt-google-analytics/issues",
     "email": "konoupakis@gmail.com"
   },
   "main": "src/app/index.js",
