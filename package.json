@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "jsnbt-google-analytics",
   "version": "1.0.3",
   "description": "Puts the google analytics snippet on the front end pages",
   "keywords": [
     "jsnbt",
     "google",
-	"analytics"
+    "analytics"
   ],
   "author": {
     "name": "Apostolis Konoupakis",
@@ -27,7 +27,7 @@
   "main": "src/app/index.js",
   "files": [
     "src/app/**",
-	"src/cfg/**",
+    "src/cfg/**",
     "src/web/admin/**",
     "scripts/**"
   ],
