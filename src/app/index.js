@@ -10,21 +10,25 @@ module.exports = {
         app = application;
     },
 
-    getConfig: function () {
-        return require('../cfg/config.js');
+    getName: function () {
+        return require('../../package.json').name;
     },
 
     getVersion: function () {
         return require('../../package.json').version;
     },
 
+    getConfig: function () {
+        return require('../cfg/config.js');
+    },
+    
     view: {
 
         preparse: function (server, ctx, preparsingContext, next) {
             
-            ctx.dpd.settings.getCached({
+            ctx.db.settings.getCached({
                 domain: 'gAnalytics'
-            }, function (results, err) {
+            }, function (err, results) {
                 if (err) {
                     next(preparsingContext);
                 }
