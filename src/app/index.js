@@ -22,9 +22,9 @@ module.exports = {
 
         preparse: function (server, ctx, preparsingContext, next) {
             
-            ctx.dpd.settings.getCached({
+            ctx.db.settings.getCached({
                 domain: 'gAnalytics'
-            }, function (results, err) {
+            }, function (err, results) {
                 if (err) {
                     next(preparsingContext);
                 }
