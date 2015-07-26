@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    angular.module("jsnbt")
+    angular.module("jsnbt-google-analytics", ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider.
             when('/modules/gAnalytics', {
