@@ -1,6 +1,6 @@
 var packInfo = require('../package');
-var npm = require('jsnbt/src/util/npm.js')
+var installer = require('jsnbt/installer');
 
 console.log('uninstalling ' + packInfo.name + ' v' + packInfo.version);
-npm.unpack(packInfo.name);
+installer.npm.unpack(packInfo.name);
 console.log('uninstalled ' + packInfo.name + ' v' + packInfo.version);

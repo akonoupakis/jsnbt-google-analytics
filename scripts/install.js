@@ -1,6 +1,6 @@
 var packInfo = require('../package');
-var npm = require('jsnbt/src/util/npm.js')
+var installer = require('jsnbt/installer');
 
 console.log('installing ' + packInfo.name + ' v' + packInfo.version);
-npm.pack(packInfo.name, true);
+installer.npm.pack(packInfo.name, true);
 console.log('installed ' + packInfo.name + ' v' + packInfo.version);

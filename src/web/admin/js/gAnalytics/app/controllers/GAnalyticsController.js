@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    angular.module("jsnbt-google-analytics")
+    angular.module("jsnbt")
         .controller('GAnalyticsController', function ($scope, $controller, $location, $logger, $timeout) {
 
             var logger = $logger.create('GAnalyticsController');
