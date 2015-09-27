@@ -1,26 +1,15 @@
 ﻿; (function () {
     "use strict";
 
+    var SettingsController = function ($scope, $route, $location, $jsnbt) {
+        jsnbt.SettingsControllerBase.apply(this, $scope.getBaseArguments($scope));
+
+
+        $scope.init();
+    };
+    SettingsController.prototype = Object.create(jsnbt.SettingsControllerBase.prototype);
+
     angular.module("jsnbt-google-analytics")
-        .controller('GAnalyticsController', function ($scope, $controller, $location, $logger, $timeout) {
-
-            var logger = $logger.create('GAnalyticsController');
-
-            $controller('SettingsBaseController', $scope.base.settings);
-
-            $scope.back = function () {
-                $location.previous('/modules');
-            };
-
-            $timeout(function () {
-                $scope.setLocation();
-                $scope.load().then(function () {
-                    $scope.setSpy(200);
-                }, function (ex) {
-                    logger.error(ex);
-                });
-            }, 200);
-
-        });
+        .controller('GAnalyticsController', ['$scope', '$route', '$location', '$jsnbt', SettingsController]);
 
 })();
