@@ -4,16 +4,17 @@
     angular.module("jsnbt-google-analytics", ['ngRoute'])
     .config(function ($routeProvider) {
 
-        var router = angular.getRouter($routeProvider);
+        var TEMPLATE_BASE = jsnbt.TEMPLATE_BASE;
 
-        router.
-            when('/modules/gAnalytics', {
-                controller: 'GAnalyticsController',
-                baseTemplateUrl: 'tmpl/core/base/settings.html',
-                templateUrl: 'tmpl/gAnalytics/settings.html',
-                section: 'gAnalytics',
-                domain: 'gAnalytics'
-            });
+        var router = new jsnbt.router('gAnalytics', $routeProvider);
+
+        router.when('/modules/gAnalytics', function (x) {
+            x.section('gAnalytics');
+            x.baseTemplate(TEMPLATE_BASE.settings);
+            x.template('tmpl/gAnalytics/settings.html');
+            x.controller('GAnalyticsController');
+        });
+
     });
 
 })();

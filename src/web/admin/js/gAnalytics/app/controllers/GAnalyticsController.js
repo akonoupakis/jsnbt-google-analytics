@@ -3,8 +3,7 @@
 
     var SettingsController = function ($scope, $route, $location, $jsnbt) {
         jsnbt.SettingsControllerBase.apply(this, $scope.getBaseArguments($scope));
-
-
+        
         $scope.init();
     };
     SettingsController.prototype = Object.create(jsnbt.SettingsControllerBase.prototype);
