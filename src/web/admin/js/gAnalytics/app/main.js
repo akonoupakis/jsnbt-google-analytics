@@ -6,7 +6,7 @@
 
         var TEMPLATE_BASE = jsnbt.constants.TEMPLATE_BASE;
 
-        var router = new jsnbt.router('gAnalytics', $routeProvider);
+        var router = new jsnbt.ViewRouter('gAnalytics', $routeProvider);
 
         router.when('/modules/gAnalytics', function (x) {
             x.section('gAnalytics');
