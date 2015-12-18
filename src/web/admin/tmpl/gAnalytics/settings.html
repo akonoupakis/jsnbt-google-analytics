@@ -5,10 +5,15 @@
     </div>
 </div>
 
+<div class="bs-callout bs-callout-info">
+    <p>Add the tracking code to enable google analytics on the site pages.</p> 
+</div>
+
 <hr />
 
 <div class="row" id="settings-code" data-scrollspy="tracking code">
-    <ctrl-text class="col-sm-12" ng-model="settings.code" ng-required="true" ng-auto-focus="true" ng-label="Tracking code"></ctrl-text>
+    <ctrl-text class="col-sm-10" ng-model="settings.code" ng-required="true" ng-auto-focus="true" ng-disabled="!settings.enabled" ng-label="tracking code"></ctrl-text>
+    <ctrl-check class="col-sm-2" ng-model="settings.enabled" ng-label="enabled"></ctrl-check>
 </div>
 
 <hr />
