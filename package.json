@@ -1,7 +1,7 @@
 ﻿{
   "name": "jsnbt-google-analytics",
   "version": "1.0.113",
-  "description": "Puts the google analytics snippet on the front end pages",
+  "description": "Puts the google analytics snippet on the jsnbt pages",
   "keywords": [
     "jsnbt",
     "google",
@@ -28,13 +28,8 @@
   "files": [
     "src/app/**",
     "src/cfg/**",
-    "src/web/admin/**",
-    "scripts/**"
+    "src/web/**"
   ],
-  "scripts": {
-    "install": "node scripts/install.js",
-    "postuninstall": "node scripts/uninstall.js"
-  },
   "dependencies": {},
   "devDependencies": {}
 }

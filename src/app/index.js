@@ -1,5 +1,3 @@
-var https = require('https');
-
 var app = null;
 
 module.exports = {
@@ -34,7 +32,7 @@ module.exports = {
                 }
                 else {
                     var settings = results.length > 0 ? results[0] : undefined;
-                    if (settings && settings.data && settings.data.code && settings.data.code !== '') {
+                    if (settings && settings.data && settings.data.code && settings.data.code !== '' && settings.data.enabled === true) {
 
                         preparsingContext.model.gAnalyticsCode = settings.data.code;
                         preparsingContext.tmpl = preparsingContext.tmpl.replace('</body>', "\
