@@ -24,18 +24,21 @@ module.exports = {
 
         preparse: function (server, ctx, preparsingContext, next) {
             
-            ctx.db.settings.getCached({
-                domain: 'gAnalytics'
-            }, function (err, results) {
-                if (err) {
-                    next(preparsingContext);
-                }
-                else {
-                    var settings = results.length > 0 ? results[0] : undefined;
-                    if (settings && settings.data && settings.data.code && settings.data.code !== '' && settings.data.enabled === true) {
+            var settingsStore = server.db.createStore('settings');
+            settingsStore.get(function (x) {
+                x.query({
+                    domain: 'gAnalytics'
+                });
+                x.single();
+                x.cached();
+            }, function (err, settings) {
+                if (err)
+                    return next(preparsingContext);
 
-                        preparsingContext.model.gAnalyticsCode = settings.data.code;
-                        preparsingContext.tmpl = preparsingContext.tmpl.replace('</body>', "\
+                if (settings && settings.data && settings.data.code && settings.data.code !== '' && settings.data.enabled === true) {
+
+                    preparsingContext.model.gAnalyticsCode = settings.data.code;
+                    preparsingContext.tmpl = preparsingContext.tmpl.replace('</body>', "\
                         <script type=\"text/javascript\">\n\
                             var _gaq = _gaq || [];\n\n\
                             _gaq.push(['_setAccount', '<%= gAnalyticsCode %>']);\n\
@@ -49,15 +52,13 @@ module.exports = {
                         </script>\n\
                     </body>");
 
-                        next(preparsingContext);
-                    }
-                    else {
-                        next(preparsingContext);
-                    }
+                    next(preparsingContext);
+                }
+                else {
+                    next(preparsingContext);
                 }
             });
 
-         
         },
 
         postparse: function (server, ctx, postparsingContext, next) {
