@@ -175,3 +175,5 @@ $RECYCLE.BIN/
 
 /npm
 publish.lnk
+publish.js
+publish.targets.json
