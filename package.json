@@ -1,35 +1,35 @@
-﻿{
-  "name": "jsnbt-google-analytics",
-  "version": "1.0.121",
-  "description": "Puts the google analytics snippet on the jsnbt pages",
-  "keywords": [
-    "jsnbt",
-    "google",
-    "analytics"
-  ],
-  "author": {
-    "name": "Apostolis Konoupakis",
-    "email": "konoupakis@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/akonoupakis/jsnbt-google-analytics.git"
-  },
-  "bugs": {
-    "url": "https://github.com/akonoupakis/jsnbt-google-analytics/issues",
-    "email": "konoupakis@gmail.com"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
-  "main": "src/app/index.js",
-  "files": [
-    "src/app/**",
-    "src/cfg/**",
-    "src/web/**"
-  ],
-  "dependencies": {},
-  "devDependencies": {}
+{
+	"name": "jsnbt-google-analytics",
+	"version": "1.0.122",
+	"description": "Puts the google analytics snippet on the jsnbt pages",
+	"keywords": [
+		"jsnbt",
+		"google",
+		"analytics"
+	],
+	"author": {
+		"name": "Apostolis Konoupakis",
+		"email": "konoupakis@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/akonoupakis/jsnbt-google-analytics.git"
+	},
+	"bugs": {
+		"url": "https://github.com/akonoupakis/jsnbt-google-analytics/issues",
+		"email": "konoupakis@gmail.com"
+	},
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	],
+	"main": "src/app/index.js",
+	"files": [
+		"src/app/**",
+		"src/cfg/**",
+		"src/web/**"
+	],
+	"dependencies": {},
+	"devDependencies": {}
 }
