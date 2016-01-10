@@ -1,6 +1,6 @@
 {
 	"name": "jsnbt-google-analytics",
-	"version": "1.0.123",
+	"version": "1.0.124",
 	"description": "Puts the google analytics snippet on the jsnbt pages",
 	"keywords": [
 		"jsnbt",
