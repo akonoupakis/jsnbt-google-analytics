@@ -1,12 +1,12 @@
 ﻿; (function () {
     "use strict";
 
-    angular.module("jsnbt-google-analytics", ['ngRoute'])
-    .config(function ($routeProvider) {
+    angular.module("jsnbt-google-analytics", ['ngPathRouter'])
+    .config(['$routerProvider', function ($routerProvider) {
 
         var TEMPLATE_BASE = jsnbt.constants.TEMPLATE_BASE;
 
-        var router = new jsnbt.ViewRouter('gAnalytics', $routeProvider);
+        var router = new jsnbt.ViewRouter('gAnalytics', $routerProvider);
 
         router.when('/modules/gAnalytics', function (x) {
             x.section('gAnalytics');
@@ -15,6 +15,6 @@
             x.controller('GAnalyticsController');
         });
 
-    });
+    }]);
 
 })();
