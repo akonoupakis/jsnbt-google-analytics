@@ -1,7 +1,7 @@
 {
 	"name": "jsnbt-google-analytics",
 	"version": "1.1.24",
-	"description": "Puts the google analytics snippet on the jsnbt pages",
+	"description": "the google analytics tracking code for the jsnbt pages",
 	"keywords": [
 		"jsnbt",
 		"google",
@@ -19,11 +19,7 @@
 		"url": "https://github.com/akonoupakis/jsnbt-google-analytics/issues",
 		"email": "konoupakis@gmail.com"
 	},
-	"licenses": [
-		{
-			"type": "MIT"
-		}
-	],
+	"license": "MIT",
 	"main": "src/app/index.js",
 	"files": [
 		"src/app/**",
